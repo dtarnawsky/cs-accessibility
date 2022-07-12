@@ -1,0 +1,7 @@
+{
+  "name": "cs-accessibility",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
