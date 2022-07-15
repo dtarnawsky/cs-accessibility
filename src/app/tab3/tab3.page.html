@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 3
+    <ion-title role="heading" aria-level="1">
+      Other
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,9 +9,95 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
+      <ion-title role="heading" aria-level="1" size="large">Other</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <!-- Accordion -->
+  <ion-accordion-group>
+    <ion-accordion value="first">
+      <ion-item slot="header" color="light">
+        <ion-label>First Accordion</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        First Content
+      </div>
+    </ion-accordion>
+    <ion-accordion value="second">
+      <ion-item slot="header" color="light">
+        <ion-label>Second Accordion</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        Second Content
+      </div>
+    </ion-accordion>
+    <ion-accordion value="third">
+      <ion-item slot="header" color="light">
+        <ion-label>Third Accordion</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        Third Content
+      </div>
+    </ion-accordion>
+  </ion-accordion-group>
+
+  <!-- Badge -->
+  <ion-badge color="primary">11</ion-badge>
+  <ion-item>
+    <ion-label>My Badge</ion-label>
+    <ion-badge slot="end" color="secondary">22</ion-badge>
+  </ion-item>
+
+  <!-- Text Area -->
+  <ion-item>
+    <ion-textarea placeholder="Enter more information here..."></ion-textarea>
+  </ion-item>
+
+  <!-- Breadcrumb -->
+  <ion-breadcrumbs>
+    <ion-breadcrumb href="#home">Home</ion-breadcrumb>
+    <ion-breadcrumb href="#electronics">Electronics</ion-breadcrumb>
+    <ion-breadcrumb href="#cameras">Cameras</ion-breadcrumb>
+    <ion-breadcrumb href="#film">Film</ion-breadcrumb>
+  </ion-breadcrumbs>
+
+  <!-- Card -->
+  <ion-card>
+    <img alt="madison" src="https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_799,q_75,w_1200/v1/clients/madison/Isthmus_at_Night_OVJ_large_f9f6c000-81fc-43d8-999d-92b75cd8e220.jpg" />
+    <ion-card-header>
+      <ion-card-subtitle>Destination</ion-card-subtitle>
+      <ion-card-title>Madison, WI</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Founded in 1829 on an isthmus between Lake Monona and Lake Mendota, Madison was named the capital of the
+      Wisconsin Territory in 1836.
+    </ion-card-content>
+  </ion-card> 
+  
+  <!-- Avatar -->
+  <ion-chip>
+    <ion-avatar>
+      <img aria-hidden="true" src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+    </ion-avatar>
+    <ion-label>Chip Avatar</ion-label>
+  </ion-chip>
+
+  <!-- Image -->
+  <ion-img style="padding:50px" alt="cycling through the park" src="https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_800,q_75,w_1200/v1/clients/madison/TotemPole_Vanorny_0013_large_81005987-dc71-4982-b332-aa05eb553377.jpg"></ion-img>
+
+  
+  <!-- Modal -->
+  <!-- Nav -->
+  <!-- Loading -->
+  <!-- Progress -->
+  <!-- Refresher -->
+  <!-- Reorder -->
+  <!-- Searchbar -->
+  <!-- Select -->
+  <!-- Slides -->
+  <!-- Grid -->
+  <!-- Toast -->
+  <!-- Toolbar -->
+  <!-- Text -->
+
 </ion-content>

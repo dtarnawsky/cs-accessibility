@@ -1,17 +1,150 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 1
+    <ion-title role="heading" aria-level="1">
+      Food
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
+<!-- Menu -->
+<ion-menu side="start" content-id="main">
+  <ion-header>
+    <ion-toolbar translucent>
+      <ion-title>Menu</ion-title>
     </ion-toolbar>
   </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item>
+        <ion-icon aria-hidden="true" name="mail" slot="start"></ion-icon>
+        <ion-label>Inbox</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon aria-hidden="true" name="paper-plane" slot="start"></ion-icon>
+        <ion-label>Outbox</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon aria-hidden="true" name="heart" slot="start"></ion-icon>
+        <ion-label>Favorites</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon aria-hidden="true" name="archive" slot="start"></ion-icon>
+        <ion-label>Archived</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon aria-hidden="true" name="trash" slot="start"></ion-icon>
+        <ion-label>Trash</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon aria-hidden="true" name="warning" slot="start"></ion-icon>
+        <ion-label>Spam</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+<ion-content id="main" [fullscreen]="true">
+ 
+  <ion-header collapse="condense">
+    <ion-toolbar>      
+      <ion-title role="heading" aria-level="1" size="large">Food</ion-title>
+      <ion-buttons slot="end">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  <div style="display:flex">
+    <ion-input aria-label="Search text" [(ngModel)]="searchText"></ion-input>
+    <img class="icon" role="button" aria-label="Search" (click)="performSearch(searchText)"
+      src="../../assets/magnifying-glass.svg">
+  </div>
+
+  <ion-list>
+    <ion-item>
+      <ion-buttons>
+        <ion-button (click)="show('You pressed order more')">Order More</ion-button>
+      </ion-buttons>
+    </ion-item>
+
+    <!-- Checkbox -->
+    <ion-item>
+      <ion-label>Ice Cream</ion-label>
+      <ion-checkbox slot="start" [(ngModel)]="icecream"></ion-checkbox>
+    </ion-item>
+
+    <!-- Chip -->
+    <ion-item>
+      <ion-chip>
+        <ion-label>Choc Mint</ion-label>
+      </ion-chip>
+      <ion-chip>
+        Vanilla
+      </ion-chip>
+      <ion-chip>
+        Strawberry
+      </ion-chip>
+    </ion-item>
+
+    <!-- DateTime -->
+    <!-- <ion-item>
+      <ion-datetime></ion-datetime>
+    </ion-item> -->
+
+    <ion-item>
+      <ion-radio-group aria-owns="rad1 rad2 rad3" value="grape">
+        <ion-list-header>
+          <ion-label>Toppings</ion-label>
+        </ion-list-header>
+        <!-- <p>A list of awesome toppings you might like</p> -->
+        <ion-list>
+          <ion-item>
+            <ion-label id="sp1">Sprinkles</ion-label>
+            <ion-radio id="rad1" slot="start" color="success" value="sprinkles"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Marshmallows</ion-label>
+            <ion-radio id="rad2" slot="start" color="tertiary" value="marshmallows"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Cherries</ion-label>
+            <ion-radio id="rad3" slot="start" color="danger" value="cherries"></ion-radio>
+          </ion-item>
+        </ion-list>
+      </ion-radio-group>
+    </ion-item>
+
+    <!-- Range -->
+    <ion-item>
+      <ion-range aria-label="Temperature" step="10">
+        <ion-icon aria-label="cold" slot="start" name="snow-outline"></ion-icon>
+        <ion-icon aria-label="hot" slot="end" name="sunny-outline"></ion-icon>
+      </ion-range>
+    </ion-item>
+
+    <!-- Range 2 -->
+    <ion-item>
+      <ion-range aria-label="Awesomeness" step="10">
+        <ion-label slot="start">Tired</ion-label>
+        <ion-label slot="end">Wired</ion-label>
+      </ion-range>
+    </ion-item>
+
+    <!-- Action Sheet -->
+    <ion-item>
+      <ion-button (click)="actionSheet()">Show Action Sheet</ion-button>
+    </ion-item>
+
+    <!-- Picker -->
+    <ion-item>
+      <ion-button (click)="showPicker()">Show Picker</ion-button>
+    </ion-item>
+
+    <ion-item>
+      <ion-button (click)="showMenu()">Show Menu</ion-button>
+    </ion-item>
+
+  </ion-list>
+
 </ion-content>
