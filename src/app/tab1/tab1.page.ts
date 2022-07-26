@@ -32,6 +32,10 @@ export class Tab1Page {
     await alert.present();
   }
 
+  showAlert(message: string) {
+    alert(message);
+  }
+
   async actionSheet() {
     const actionSheet = await this.actionSheetController.create({
       header: 'More Toppings',
