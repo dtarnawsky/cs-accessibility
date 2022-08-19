@@ -12,6 +12,23 @@
       <ion-title role="heading" aria-level="1" size="large">Other</ion-title>
     </ion-toolbar>
   </ion-header>
+  <ion-fab vertical='bottom' horizontal='end' slot='fixed'>
+    <ion-fab-button (click)="fab()" aria-label="Things">
+      <ion-icon name="accessibility"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-list>
+    <ion-item button (click)="fab()">Item 1</ion-item>
+    <ion-item button (click)="fab()">Item 2</ion-item>
+    <ion-item button (click)="fab()">Item 3</ion-item>
+    <ion-item button (click)="fab()">Item 4</ion-item>
+    <ion-item button (click)="fab()">Item 5</ion-item>
+    <ion-item  (click)="fab()">Item 6</ion-item>
+    <ion-item  (click)="fab()">Item 7</ion-item>
+  </ion-list>
+
+  <ion-icon button (click)="fab()" name="accessibility"></ion-icon>
 
   <!-- Accordion -->
   <ion-accordion-group>
@@ -41,9 +58,7 @@
     </ion-accordion>
   </ion-accordion-group>
 
-  <ion-fab>
-    <ion-fab-button aria-label="Things">Stuff</ion-fab-button>    
-  </ion-fab>
+
 
   <!-- Badge -->
   <ion-badge color="primary">11</ion-badge>
@@ -89,7 +104,7 @@
   <!-- Image -->
   <ion-img style="padding:50px" alt="cycling through the park" src="https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_800,q_75,w_1200/v1/clients/madison/TotemPole_Vanorny_0013_large_81005987-dc71-4982-b332-aa05eb553377.jpg"></ion-img>
 
-
+<ion-textarea style="border:1px solid red" maxlength="1024"></ion-textarea>
   <!-- Modal -->
   <!-- Nav -->
   <!-- Loading -->
