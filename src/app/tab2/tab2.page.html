@@ -1,9 +1,20 @@
 <ion-content>
+  <a class="skip-link" [href]="path + '#main'">Skip to Main Content</a>
   <ion-header>
     <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-button>A</ion-button>
+        <ion-button>B</ion-button>
+        <ion-button>C</ion-button>
+        <ion-button>D</ion-button>
+      </ion-buttons>
       <ion-title>Food</ion-title>
     </ion-toolbar>
+    
   </ion-header>
+  <main id="main">
+    This is the main content of the page
+  </main>
   <ion-searchbar showCancelButton="always"></ion-searchbar>
   <div>
     <button (click)="show('You pressed order more')">Order More</button>
