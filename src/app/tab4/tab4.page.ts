@@ -29,4 +29,8 @@ export class Tab4Page {
     }
     this.message = undefined;
   }
+
+  go() {
+    alert('hi');
+  }
 }
